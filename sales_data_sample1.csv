@@ -1,0 +1,7 @@
+CustomerID,Country,OrderAmount,Product,STATUS
+101,USA,250.0,Laptop,Shipped
+ ,UK,400.0,Tablet,Pending
+103,India,350.0,Phone,Cancelled
+104,German,600.0,Laptop,Shipped
+105,UK,150.0,Phone,Pending
+106,  ,500.0,Tablet,Shipped
