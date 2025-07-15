@@ -43,20 +43,16 @@ Input is read from a CSV file: `sales_data_sample1.csv`
    - Combines transformed features and the target column
    - Saves the final dataset to `processed_data2.csv`
 
----
-
-## ✅ Sample Output
-
-```python
-['num__Feature1', 'num__Feature2', ..., 'cat__Country_US', 'cat__Country_UK']
-Data Transformed Successfully.
-Transformed Data Loaded and Saved to processed_data2.csv.
-
 -  Company: CodTech IT Solutions  
 -  Name: Jayant Sirurmath  
 -  Intern ID: CT08DL564  
 -  Domain: Data Science  
 -  Duration: 8 Weeks  
 -  Mentor: Neela Santosh 
+
+---
+
+
+
 
 
