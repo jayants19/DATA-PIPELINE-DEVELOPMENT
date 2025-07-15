@@ -1,32 +1,54 @@
 # DATA-PIPELINE-DEVELOPMENT
 
-🧪 ETL Pipeline using Pandas & Scikit-Learn
-This project performs a basic ETL (Extract, Transform, Load) process on a CSV dataset using Python libraries.
+# 🧪 ETL Process on Sales Data using Pandas & Scikit-Learn
 
-🔁 ETL Workflow
-1. Extract
-Reads data from sales_data_sample1.csv using pandas.read_csv() with 'latin1' encoding.
+This project performs a complete ETL (Extract, Transform, Load) process on a sales dataset using Python libraries **Pandas** and **Scikit-Learn**.
 
-2. Transform
-Splits features (X) and target (y) where STATUS is the target.
+---
 
-Applies preprocessing:
+## 🎯 Objective
 
-Numerical Columns:
+Preprocess raw sales data by:
 
-Imputes missing values using the mean.
+- Handling missing values  
+- Scaling numerical features  
+- Encoding categorical features  
+- Exporting the cleaned dataset for further use (e.g., machine learning)
 
-Scales features with StandardScaler.
+---
 
-Categorical Columns:
+## 📁 Input Data
 
-Imputes missing values with the most frequent value.
+Input is read from a CSV file: `sales_data_sample1.csv`
 
-Encodes categories using OneHotEncoder.
+- The dataset contains both numeric and categorical columns.
+- The target column is: `STATUS`
 
-3. Load
-Transformed data is converted back into a DataFrame.
+---
 
-Target column is added back.
+## 🧠 What This Project Does
 
-Saves final processed data to processed_data2.csv.
+1. **Extracts Data**  
+   - Reads the CSV file into a pandas DataFrame using `latin1` encoding.
+
+2. **Transforms Data**  
+   - Splits features (`X`) and target (`y`)
+   - Identifies numeric and categorical columns
+   - Applies:
+     - **Mean imputation** and **StandardScaler** for numeric columns  
+     - **Most frequent imputation** and **OneHotEncoder** for categorical columns
+   - Uses `ColumnTransformer` and `Pipeline` to process the data
+
+3. **Loads Data**  
+   - Combines transformed features and the target column
+   - Saves the final dataset to `processed_data2.csv`
+
+---
+
+## ✅ Sample Output
+
+```python
+['num__Feature1', 'num__Feature2', ..., 'cat__Country_US', 'cat__Country_UK']
+Data Transformed Successfully.
+Transformed Data Loaded and Saved to processed_data2.csv.
+
